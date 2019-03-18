@@ -12,6 +12,7 @@ def get_first_name_of_season_winner(data, season)
           winner_full_name = v[v_i]["name"]
           winner_first_name = winner_full_name.split
           winner = winner_first_name[0]
+          binding.pry
           # return winner
           # if winner_first_name.length > 1
           #   winner =  winner_first_name[0]

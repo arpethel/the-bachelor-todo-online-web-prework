@@ -4,28 +4,25 @@ def get_first_name_of_season_winner(data, season)
   # increment data's keys
   # increment data's values
   data.each do |k, v|
-    k_i = 0
     v_i = 0
-    while k_i < k.length
-      while v_i < v.length
-        v[v_i].each do |key, value|
-          # binding.pry
-          if value == "Winner"
-            winner_full_name = v[v_i]["name"]
-            winner_first_name = winner_full_name.split
-            winner = winner_first_name[0]
-            # return winner
-            # if winner_first_name.length > 1
-            #   winner =  winner_first_name[0]
-            # else
-            #   winner = winner_full_name
-            # end
-          end
-          # binding.pry
+    while v_i < v.length
+      v[v_i].each do |key, value|
+        # binding.pry
+        if value == "Winner"
+          winner_full_name = v[v_i]["name"]
+          winner_first_name = winner_full_name.split
+          winner = winner_first_name[0]
+          # return winner
+          # if winner_first_name.length > 1
+          #   winner =  winner_first_name[0]
+          # else
+          #   winner = winner_full_name
+          # end
+          v_i += 1
         end
-        v_i += 1
+        # binding.pry
       end
-      k_i += 1
+      # v_i += 1
     end
   end
 end
